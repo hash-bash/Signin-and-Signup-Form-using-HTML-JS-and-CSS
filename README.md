@@ -1,2 +1,2 @@
-# Signin-and-Signup-form-using-HTML-JS-and-CSS
-Frontend webpages for login and registration form developed usign HTML, Javascript, CSS, and little bit of JQuery.
+# Signin and Signup form using HTML, Javascript and CSS
+Frontend webpages for login and registration form developed using HTML, Javascript, CSS, and a little bit of JQuery.
