@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -21,7 +22,6 @@ body {
     background: black;
     color: white;
     padding: 13px 13px 13px 30px;
-    width: 100%;
 }
 
 .header-text {
@@ -39,12 +39,10 @@ body {
     flex: 0.65;
     background-size: cover;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-    display: inline-block;
 }
 
 .vertical-section-2 {
     flex: 0.35;
-    display: inline-block;
 }
 
 .login-signup-holder {
