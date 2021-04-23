@@ -21,7 +21,7 @@ const EmailError = document.getElementById("error5")
 const PassError = document.getElementById("error6")
 const CPassError = document.getElementById("error7")
 
-const Strength = document.getElementById("strenght")
+const Strength = document.getElementById("strength")
 const RegisterForm = document.getElementById("register-form")
 
 const indicator = document.querySelector(".indicator");
@@ -31,12 +31,13 @@ const medium = document.querySelector(".medium");
 const strong = document.querySelector(".strong");
 const text = document.querySelector(".strength");
 
-let regExpWeak = /[a-z]/;
+let regExpWeak = /[a-zA-Z]+/;
 let regExpMedium = /\d+/;
-let regExpStrong = /.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/;
+let regExpStrong = /[!@#$%^&*?_~(),-]+/;
 
 function trigger() {
-    if (input.value != "") {
+    let no;
+    if (input.value !== "") {
         indicator.style.display = "block";
         indicator.style.display = "flex";
         if (input.value.length <= 3 && (input.value.match(regExpWeak) || input.value.match(regExpMedium) || input.value.match(regExpStrong))) no = 1;
@@ -73,7 +74,7 @@ function trigger() {
 }
 
 function validateEmail(emailText) {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const re = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
     return re.test(String(emailText).toLowerCase());
 }
 
@@ -83,7 +84,7 @@ function validatePhone(phoneText) {
 }
 
 function validateName(nameText) {
-    const re = /^[a-zA-Z ]*$/;
+    const re = /^[a-zA-Z]*$/;
     return re.test(String(nameText));
 }
 
